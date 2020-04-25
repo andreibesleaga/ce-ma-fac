@@ -109,7 +109,7 @@ const Home = () => {
           }
         />
       </div>
-      <div className="container pages-list">
+      <div className="container pages-list" tabIndex="0">
         <List columns={3}>
           {data.map(doc => (
             <ListItem
@@ -125,9 +125,9 @@ const Home = () => {
 
       <div className="container">
         <div className="columns homepage-columns">
-          <aside className="column is-4 homepage-sidebar">
+          <aside className="column is-4 homepage-sidebar" tabIndex="0" role="navigation">
             <SidebarMenu>
-              <div className="search-input">
+              <div className="search-input" tabIndex="0" role="menuitem">
                 <SearchInput
                   placeholder="Caută informații aici"
                   value={searchQuery}
@@ -141,10 +141,11 @@ const Home = () => {
                   // Ignore the first subpage title
                   // It's shown as page title
                   menuItems = doc.content.slice(1).map(page => (
-                    <SidebarMenuItem
+                    <SidebarMenuItem 
                       key={`subpage-header_${page.slug}`}
                       active={page.slug === subPageSlug}
                       onClick={() => navigateToPage(`${doc.slug}/${page.slug}`)}
+                      onEnter={() => navigateToPage(`${doc.slug}/${page.slug}`)}        
                     >
                       {page.title}
                     </SidebarMenuItem>
@@ -152,8 +153,8 @@ const Home = () => {
                 }
 
                 return (
-                  <div key={`page-wrapper_${doc.slug}`}>
-                    <SidebarMenuItem
+                  <div key={`page-wrapper_${doc.slug}`} tabIndex="0">
+                    <SidebarMenuItem  
                       key={`page-header_${doc.slug}`}
                       active={
                         !subPageSlug &&
@@ -161,6 +162,7 @@ const Home = () => {
                           (doc.slug === "/" && !pageSlug))
                       }
                       onClick={() => navigateToPage(doc.slug)}
+                      onEnter={() => navigateToPage(doc.slug)}
                       isTitle
                     >
                       {doc.title}
