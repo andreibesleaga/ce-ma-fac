@@ -79,7 +79,7 @@ export default [
     slug: "cum-ne-protejam",
     doc_type: "STATIC_PAGE",
     doc_id: 102,
-    active: false,
+    active: true,
     display_order: 3,
     content: [
       {
@@ -213,7 +213,7 @@ export default [
       },
       {
         title: "15 recomandări privind conduita socială responsabilă în prevenirea răspândirii coronavirus",
-        display_order: 5,
+        display_order: 6,
         slug: "recomandari-privind-conduita-sociala-responsabila",
         page: `
          <h3 id="recomandari">Protejați-vă, evitați contactul direct!</h3>
@@ -276,7 +276,7 @@ export default [
     slug: "ai-simptome",
     doc_type: "STATIC_PAGE",
     doc_id: 103,
-    active: false,
+    active: true,
     display_order: 4,
     content: [
       {
@@ -565,7 +565,7 @@ export default [
     slug: "adaptare-si-rezistenta",
     doc_type: "STATIC_PAGE",
     doc_id: 104,
-    active: false,
+    active: true,
     display_order: 5,
     content: [
       {
@@ -781,7 +781,7 @@ export default [
     slug: "pentru-cei-care-ofera-ajutor",
     doc_type: "STATIC_PAGE",
     doc_id: 105,
-    active: false,
+    active: true,
     display_order: 6,
     content: [
       {
@@ -889,7 +889,7 @@ export default [
     slug: "/",
     doc_type: "STATIC_PAGE",
     doc_id: 106,
-    active: false,
+    active: true,
     display_order: 1,
     content: [
       {
@@ -1181,7 +1181,7 @@ Cea mai sigură metodă de evitare a infecției este să evitați expunerea la v
     slug: "mituri-despre-coronavirus",
     doc_type: "STATIC_PAGE",
     doc_id: 107,
-    active: false,
+    active: true,
     display_order: 7,
     content: [
       {
